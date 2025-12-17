@@ -1,5 +1,5 @@
 //crate var for player input
-
+//
 
 
 //crate function getComputerChoice
@@ -8,6 +8,16 @@
 //crate if stetment number is 1 take rock
 //else if 2 take paper
 //else scissors
+
+        ;
+let getHumanChoice = prompt("Rock,Paper,Scissors");
+console.log("Your Choice" + " " + getHumanChoice);
+
+if (getHumanChoice ==="Rock" || getHumanChoice ==="Paper" || getHumanChoice ==="Scissors"){
+    console.log("Valid choice!");
+} else {
+    console.log("Invalid choice! Please enter rock, paper, or scissors.");
+}
 
 
 function getComputerChoice() {
