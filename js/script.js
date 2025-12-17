@@ -9,11 +9,18 @@
 //else if 2 take paper
 //else scissors
 
-        ;
-let getHumanChoice = prompt("Rock,Paper,Scissors");
-console.log("Your Choice" + " " + getHumanChoice);
 
-if (getHumanChoice ==="Rock" || getHumanChoice ==="Paper" || getHumanChoice ==="Scissors"){
+
+
+
+let humanScore = 0 ;
+let computerScore = 0 ;
+ 
+
+let getHumanChoice = prompt("Rock,Paper,Scissors").trim().toLowerCase();
+console.log("Your Choice: " + getHumanChoice);
+
+if (getHumanChoice ==="rock" || getHumanChoice ==="paper" || getHumanChoice ==="scissors"){
     console.log("Valid choice!");
 } else {
     console.log("Invalid choice! Please enter rock, paper, or scissors.");
@@ -31,5 +38,5 @@ function getComputerChoice() {
         return "Scissors";
     }
 }
-
-console.log(getComputerChoice());
+let ComputerChoice = getComputerChoice()
+console.log("Computer Choice: " + ComputerChoice);
