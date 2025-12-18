@@ -70,3 +70,5 @@ if (Player === Computer) {
         console.log(`You loss ${capitalize(Computer)} beat ${capitalize(Player)}`)
         computerScore++;
     }
+
+    console.log(`Score - You: ${humanScore} Computer: ${computerScore}`)
