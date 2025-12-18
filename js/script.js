@@ -17,6 +17,10 @@ let humanScore = 0 ;
 let computerScore = 0 ;
  
 
+function capitalize(str){
+    return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
 let getHumanChoice = prompt("Rock,Paper,Scissors").trim().toLowerCase();
 console.log("Your Choice: " + getHumanChoice);
 
@@ -48,3 +52,14 @@ function playerRound(getHumanChoice, ComputerChoice){
     const Computer = ComputerChoice.toLowerCase().trim();
 }
 
+if (player === Computer) {
+    console.log(`It's a tie! Both chose ${capitalize(player)}`);
+    } else if (
+        (player === "rock" && Computer === "scissors") ||
+        (player === "paper" && Computer === "rock") ||
+        (player === "scissors" && Computer === "paper")
+    ) {
+        console.log(`You win! ${capitalize(player)} beat ${capitalize(Computer)}`);
+    } else {
+        console.log(`You loss ${capitalize(Computer)} beat ${capitalize(player)}`)
+    }
