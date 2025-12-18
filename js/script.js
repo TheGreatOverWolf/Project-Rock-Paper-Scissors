@@ -49,7 +49,7 @@ console.log("Computer Choice: " + ComputerChoice);
 const Player = getHumanChoice.toLowerCase().trim();
 const Computer = ComputerChoice.toLowerCase().trim();
 
-function playerRound(getHumanChoice, ComputerChoice){
+function playerRound(Player , Computer){
      if (!["rock", "paper", "scissors"].includes(Player)){
         console.log("Invalid human choice provided to playRound!");
         return;
