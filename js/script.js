@@ -46,20 +46,27 @@ function getComputerChoice() {
 let ComputerChoice = getComputerChoice()
 console.log("Computer Choice: " + ComputerChoice);
 
+const Player = getHumanChoice.toLowerCase().trim();
+const Computer = ComputerChoice.toLowerCase().trim();
 
 function playerRound(getHumanChoice, ComputerChoice){
-    const player = getHumanChoice.toLowerCase().trim();
-    const Computer = ComputerChoice.toLowerCase().trim();
+     if (!["rock", "paper", "scissors"].includes(Player)){
+        console.log("Invalid human choice provided to playRound!");
+        return;
+    }
+
 }
 
-if (player === Computer) {
-    console.log(`It's a tie! Both chose ${capitalize(player)}`);
+if (Player === Computer) {
+    console.log(`It's a tie! Both chose ${capitalize(Player)}`);
     } else if (
-        (player === "rock" && Computer === "scissors") ||
-        (player === "paper" && Computer === "rock") ||
-        (player === "scissors" && Computer === "paper")
+        (Player === "rock" && Computer === "scissors") ||
+        (Player === "paper" && Computer === "rock") ||
+        (Player === "scissors" && Computer === "paper")
     ) {
-        console.log(`You win! ${capitalize(player)} beat ${capitalize(Computer)}`);
+        console.log(`You win! ${capitalize(Player)} beat ${capitalize(Computer)}`);
+        humanScore++;
     } else {
-        console.log(`You loss ${capitalize(Computer)} beat ${capitalize(player)}`)
+        console.log(`You loss ${capitalize(Computer)} beat ${capitalize(Player)}`)
+        computerScore++;
     }
