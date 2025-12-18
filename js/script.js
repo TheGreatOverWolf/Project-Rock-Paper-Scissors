@@ -38,5 +38,13 @@ function getComputerChoice() {
         return "Scissors";
     }
 }
+
 let ComputerChoice = getComputerChoice()
 console.log("Computer Choice: " + ComputerChoice);
+
+
+function playerRound(getHumanChoice, ComputerChoice){
+    const player = getHumanChoice.toLowerCase().trim();
+    const Computer = ComputerChoice.toLowerCase().trim();
+}
+
